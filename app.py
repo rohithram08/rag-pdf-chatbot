@@ -22,7 +22,7 @@ if "messages" not in st.session_state:
     st.session_state.messages = []
 
 # API key
-api_key = st.text_input("Enter Groq API Key", type="password")
+api_key = st.secrets["GROQ_API_KEY"]
 
 # Upload PDF
 uploaded_file = st.file_uploader("Upload a PDF", type="pdf")
